@@ -1,0 +1,128 @@
+{
+  "title": "JSON schema for .NET Core project.json files",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "definitions": {
+    "buildOptions": {
+      "description": "Options that are passed to the compiler.",
+      "type": "object",
+      "properties": {
+        "warningsAsErrors": { //no need, will be default to true
+          "type": "boolean",
+          "default": false
+        },
+        "emitEntryPoint": { //likely no need, but not sure.
+          "type": "boolean",
+          "default": false
+        },
+        "languageVersion": { //defaulted to csharp6, being updated live
+          "type": "string",
+          "enum": [
+            "csharp1",
+            "csharp2",
+            "csharp3",
+            "csharp4",
+            "csharp5",
+            "csharp6",
+            "experimental"
+          ]
+        },
+        "keyFile": { //will be added implicitly, as developer will get his key from platform
+          "type": "string"
+        },
+        "debugType": { //defaulted to portable
+          "type": "string",
+          "enum": [
+            "portable",
+            "full",
+            "none"
+          ]
+        }
+      }
+    },
+    "packOptions": {
+      "description": "Defines options pertaining to the packaging of the project output into a NuGet package.",
+      "type": "object",
+      "properties": {
+        "summary": {
+          "description": "A short description of the package.",
+          "type": "string"
+        },
+        "tags": {
+          "description": "A space-delimited list of tags and keywords that describe the package.",
+          "type": "array",
+          "items": {
+            "type": "string",
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string",
+          "object"
+        ],
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "target": {
+            "type": "string",
+            "description": "Restrict this dependency to matching only a Project or a Package.",
+            "enum": [
+              "project",
+              "package"
+            ]
+          }
+        }
+      },
+      "description": "Each dependency is defined by a name and a version. Dependencies are resolved from NuGet feeds defined by your package sources and projects located in the directories specified by the 'global.json' file."
+    }
+  },
+  "properties": {
+    "authors": { 
+      "description": "The author of the application.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "uniqueItems": true
+      }
+    },
+    "testRunner": { //Used for now, later will be defaulted and removed
+      "description": "The name of the test runner to use with this project",
+      "type": "string"
+    },
+    "packOptions": { //will be moved ton top level
+      "$ref": "#/definitions/packOptions"
+    },
+    "dependencies": {
+      "$ref": "#/definitions/dependencies"
+    },
+    "copyright": {
+      "description": "Copyright details for the package.",
+      "type": "string"
+    },
+    "title": {
+      "description": "The human-friendly title of the package",
+      "type": "string"
+    },
+    "description": {
+      "description": "The description of the project/package.",
+      "type": "string"
+    },
+    "frameworks": { //assigned implicitly
+      "description": "Target frameworks that will be built, and dependencies that are specific to the build of this project for that framework.",
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/configType"
+      }
+    },
+    "version": {
+      "description": "The version of the project/package. Examples: 1.2.3, 1.2.3-beta, 1.2.3-*",
+      "type": "string"
+    }
+  }
+}

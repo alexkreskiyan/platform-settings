@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "required": [
+    "name",
+    "title",
+    "summary",
+    "description"
+  ],
+  "properties": {
+    "name": {
+      "description": "System package name",
+      "type": "string",
+      "pattern": "^(?:[A-z]+.)*[A-z]+$"
+    },
+    "title": {
+      "description": "Human-friendly title of the package",
+      "type": "string",
+      "minLength": 15,
+      "maxLength": 50
+    },
+    "summary": {
+      "description": "Short description of the package",
+      "type": "string",
+      "minLength": 50,
+      "maxLength": 100
+    },
+    "description": {
+      "description": "Description of the package",
+      "type": "string",
+      "minLength": 100,
+      "maxLength": 500
+    },
+    "dependencies": {
+      "type": "object",
+      "additionalProperties": {
+        "description": "Package name and version of the package. Required format: x.x.x.x\rFirst number is human-understable iteration of major updates.\rSecond one is index of backward-incompatible API changing iterations\rThird is index of backward-compatible API changing iterations\rForth one is for patching releases",
+        "type": [
+          "string",
+          "object"
+        ],
+        "pattern": "^(?:[0-9]{1,5}.){3}[0-9]{1,5}$",
+        "properties": {
+          "version": {
+            "description": "Version of the package. Required format: x.x.x.x\rFirst number is human-understable iteration of major updates.\rSecond one is index of backward-incompatible API changing iterations\rThird is index of backward-compatible API changing iterations\rForth one is for patching releases",
+            "type": "string",
+            "pattern": "^(?:[0-9]{1,5}.){3}[0-9]{1,5}$"
+          },
+          "target": {
+            "type": "string",
+            "description": "Restrict this dependency to matching only a Project or a Package",
+            "enum": [
+              "project",
+              "package"
+            ]
+          }
+        }
+      },
+      "description": "Each dependency is defined by a name and a version"
+    }
+  }
+}
