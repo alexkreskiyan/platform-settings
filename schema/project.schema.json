@@ -40,6 +40,9 @@
           "object"
         ],
         "pattern": "^(?:[0-9]{1,5}.){3}[0-9]{1,5}$",
+        "required": [
+          "target"
+        ],
         "properties": {
           "version": {
             "description": "Version of the package. Required format: x.x.x.x\rFirst number is human-understable iteration of major updates.\rSecond one is index of backward-incompatible API changing iterations\rThird is index of backward-compatible API changing iterations\rForth one is for patching releases",
