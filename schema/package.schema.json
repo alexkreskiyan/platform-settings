@@ -5,11 +5,6 @@
     "name",
     "version",
     "title",
-    "authors",
-    "copyright",
-    "summary",
-    "tags",
-    "description",
     "projects"
   ],
   "properties": {
@@ -28,45 +23,6 @@
       "type": "string",
       "minLength": 15,
       "maxLength": 40
-    },
-    "authors": {
-      "description": "Package authors list",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "uniqueItems": true,
-        "minLength": 2,
-        "maxLength": 50
-      }
-    },
-    "copyright": {
-      "description": "Copyright details for the package",
-      "type": "string",
-      "minLength": 5,
-      "maxLength": 50
-    },
-    "summary": {
-      "description": "Short description of the package",
-      "type": "string",
-      "minLength": 40,
-      "maxLength": 100
-    },
-    "tags": {
-      "description": "List of tags and keywords that describe the package",
-      "type": "array",
-      "minItems": 2,
-      "items": {
-        "type": "string",
-        "uniqueItems": true,
-        "minLength": 2,
-        "maxLength": 30
-      }
-    },
-    "description": {
-      "description": "Description of the package",
-      "type": "string",
-      "minLength": 100,
-      "maxLength": 500
     },
     "projects": {
       "description": "Package projects' folders list",

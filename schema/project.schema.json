@@ -3,9 +3,7 @@
   "type": "object",
   "required": [
     "name",
-    "title",
-    "summary",
-    "description"
+    "title"
   ],
   "properties": {
     "name": {
@@ -18,18 +16,6 @@
       "type": "string",
       "minLength": 15,
       "maxLength": 50
-    },
-    "summary": {
-      "description": "Short description of the package",
-      "type": "string",
-      "minLength": 50,
-      "maxLength": 100
-    },
-    "description": {
-      "description": "Description of the package",
-      "type": "string",
-      "minLength": 100,
-      "maxLength": 500
     },
     "dependencies": {
       "type": "object",
