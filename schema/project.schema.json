@@ -8,17 +8,12 @@
   ],
   "properties": {
     "name": {
-      "description": "System package name",
+      "description": "System project name",
       "type": "string",
       "pattern": "^(?:[A-z]+.)*[A-z]+$"
     },
-    "version": {
-      "description": "Version of the package. Required format: x.x.x.x\rFirst number is human-understable iteration of major updates.\rSecond one is index of backward-incompatible API changing iterations\rThird is index of backward-compatible API changing iterations\rForth one is for patching releases",
-      "type": "string",
-      "pattern": "^(?:[0-9]{1,5}.){3}[0-9]{1,5}$"
-    },
     "title": {
-      "description": "Human-friendly title of the package",
+      "description": "Human-friendly title of the project",
       "type": "string",
       "minLength": 15,
       "maxLength": 50

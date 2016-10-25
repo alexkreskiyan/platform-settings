@@ -1,2 +1,24 @@
 {
+    "Microsoft.NETCore.App": {
+        "1.0.1": {}
+    },
+    "Annium.Sample": {
+        "0.1.0.0": {
+            "name": "Annium.Sample",
+            "version": "0.1.0.0",
+            "title": "Annium sample"
+        },
+        "0.1.0.1": {
+            "name": "Annium.Sample",
+            "version": "0.1.0.1",
+            "title": "Annium sample new"
+        }
+    },
+    "Annium.Sample.Tests": {
+        "0.1.0.0": {
+            "name": "Annium.Sample.Tests",
+            "version": "0.1.0.0",
+            "title": "Annium sample tests"
+        }
+    }
 }
