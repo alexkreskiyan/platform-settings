@@ -1,9 +1,0 @@
-{
-  "framework": {
-    "name": "netcoreapp1.0",
-    "package": "Microsoft.NETCore.App",
-    "imports": [
-      "netstandard1.6"
-    ]
-  }
-}
