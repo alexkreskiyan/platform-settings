@@ -6,6 +6,7 @@
     "title",
     "projects"
   ],
+  "additionalProperties": false,
   "properties": {
     "name": {
       "description": "System package name",
@@ -35,6 +36,5 @@
         ]
       }
     }
-  },
-  "additionalProperties": false
+  }
 }
