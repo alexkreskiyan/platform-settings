@@ -1,9 +1,13 @@
 {
   "framework": {
     "name": "netcoreapp1.0",
-    "package": "Microsoft.NETCore.App",
+    "project": {
+      "name": "Microsoft.NETCore.App",
+      "version": "1.0.1.0"
+    },
     "imports": [
       "netstandard1.6"
     ]
-  }
+  },
+  "language": "csharp6"
 }
