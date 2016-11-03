@@ -9,5 +9,6 @@
       "netstandard1.6"
     ]
   },
-  "language": "csharp6"
+  "language": "csharp6",
+  "testRunner": "annium"
 }
