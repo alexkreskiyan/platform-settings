@@ -33,7 +33,7 @@
           "string",
           "object"
         ],
-        "pattern": "^(?:[0-9]{1,5}.){3}[0-9]{1,5}$",
+        "pattern": "^(?:[0-9]{1,5}.){1,2}[0-9]{1,5}$",
         "required": [
           "target"
         ],
@@ -65,8 +65,7 @@
         },
         "testRunner": {
           "description": "Project test runner",
-          "type": "string",
-          "pattern": "^(?:[0-9]{1,5}.){1,2}[0-9]{1,5}$"
+          "type": "string"
         }
       }
     }
