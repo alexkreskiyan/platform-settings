@@ -1,5 +1,2 @@
-# ignore packages folder
-/packages/**
-
 # ignore sources list
 /sources.json

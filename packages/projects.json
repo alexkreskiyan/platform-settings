@@ -1,0 +1,21 @@
+{
+    "Microsoft.NETCore.App": {
+        "1.0.1": {}
+    },
+    "Newtonsoft.Json": {
+        "9.0.1.0": {
+            "name": "Newtonsoft.Json",
+            "version": "9.0.1.0",
+            "hash": "",
+            "title": "Newtonsoft.Json"
+        }
+    },
+    "Newtonsoft.Json.Schema": {
+        "2.0.6.0": {
+            "name": "Newtonsoft.Json.Schema",
+            "version": "2.0.6.0",
+            "hash": "",
+            "title": "Newtonsoft.Json.Schema"
+        }
+    }
+}
